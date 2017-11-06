@@ -137,7 +137,7 @@ li:nth-child(odd) {
   -ms-transition: all 0.5s ease-in-out; 
   -o-transition: all 0.5s ease-in-out; 
   transition: all 0.5s ease-in-out; 
-  /* color: rgba(17, 26, 37, 0.795) */
+
   } 
   #backgroundaudio audio { 
   background: rgba(0, 40, 140, 0.6);
