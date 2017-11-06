@@ -31,12 +31,12 @@ A basic pong game using SVGs. First player to 11 points wins! Watch out for the 
 
 **Stretch Goals:**
 
->A winner is now declared after either player scores 11 points. 
->A controls menu is implemented using HTML and CSS
->Created a larger ball, set at a slower speed for added difficulty 
->Paddles are smoother, and have no delay when key is held
->Attempted to have "+ & -" toggle the speed of the small ball, currently not working
->music player implemented for optional background music
+* A winner is now declared after either player scores 11 points. 
+* A controls menu is implemented using HTML and CSS
+* Created a larger ball, set at a slower speed for added difficulty 
+* Paddles are smoother, and have no delay when key is held
+* Attempted to have "+ & -" toggle the speed of the small ball, currently not working
+* Music player implemented for optional background music
 
 **What I Learned:**
 
