@@ -1,3 +1,4 @@
+https://user-images.githubusercontent.com/32422707/32456731-756c396c-c2db-11e7-8118-a874daf3bf0e.png
 # Pong Game
 
 A basic pong game using SVGs. First player to 11 points wins! Watch out for the big lumbering red ball...it can be slow and may seem easy to control at first, but with the small green one flying around at the same time, it may prove to be a tougher challenge than expected.
