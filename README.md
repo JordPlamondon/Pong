@@ -1,6 +1,6 @@
 # Pong Game
 
-A basic pong game using SVGs.
+A basic pong game using SVGs. First player to 11 points wins! Watch out for the big lumbering red ball...it can be slow and may seem easy to control at first, but with the small green one flying around at the same time, it may prove to be a tougher challenge than expected.
 
 ## Setup
 
@@ -28,6 +28,7 @@ A basic pong game using SVGs.
 * ▼: down
 
 **Stretch Goals:**
+
 -A winner is now declared after either player scores 11 points. 
 -A controls menu is implemented using HTML and CSS
 -Created a larger ball, set at a slower speed for added difficulty 
@@ -36,6 +37,7 @@ A basic pong game using SVGs.
 -music player implemented for optional background music
 
 **What I Learned**
+
 It was kind of a steep learning curve at first, but I eventually grasped the concept of instantiating objects using constructors, and how to use keycodes and eventlisteners to trigger certain actions. I also learned how to render SVGs and set attributes to them. Importing and Exporting partials was another great tool I learned to implement code. 
 
 It was a great experience and I thoroughly enjoyed making the pong project my own by customizing it and adding new features. 
