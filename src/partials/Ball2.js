@@ -6,7 +6,7 @@ export default class Ball2 {
     this.radius = radius;
     this.boardWidth = boardWidth;
     this.boardHeight = boardHeight;
-    this.direction = .5;
+    this.direction = 1;
     this.ping = new Audio ('public/sounds/Oakdale Bass-condenser copy.wav');
 
   this.reset();
