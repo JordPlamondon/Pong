@@ -20,6 +20,9 @@ export default class Game {
 		this.paddleWidth = 8;
 		this.paddleHeight = 56;
 
+		this.cheer = new Audio ('public/sounds/ridiculousyay.mp3');
+		this.cheer.loop = false;
+
 		this.ball = new Ball (
 			8,
 			this.width, 
@@ -93,11 +96,16 @@ export default class Game {
 		const paddleTwoWin = this.paddleTwo.score >= 11;
 
 		if (paddleOneWin) {
-			return this.winner1.render(svg, this.winner1.banner);
+			return this.winner1.render(svg, this.winner1.banner, this.cheer.play(),
+			setTimeout(location.reload.bind(location), 7000));
 		}
 		else if (paddleTwoWin) {
-			return this.winner2.render(svg, this.winner2.banner);
-}
+			return this.winner2.render(svg, this.winner2.banner, this.cheer.play(),
+			setTimeout(location.reload.bind(location), 7000));
+		}
+
+	
+		
 
 		this.board.render(svg);
 		this.ball.render(svg, this.paddleOne, this.paddleTwo);
