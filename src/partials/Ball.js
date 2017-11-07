@@ -92,6 +92,7 @@ export default class Ball {
   }
 
   render(svg, paddleOne, paddleTwo) {
+    
     this.y += this.vy;
     this.x += this.vx;
 

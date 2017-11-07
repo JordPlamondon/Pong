@@ -2,27 +2,40 @@ import {SVG_NS} from '../settings'
 
 export default class Paddle {
   
-  constructor(boardHeight, width, height, x, y, up, down) {
+  constructor(boardHeight, width, height, x, y, upKey, downKey) {
     this.boardHeight = boardHeight;
     this.width = width;
     this.height =height;
     this.x = x;
     this.y = y;
-
-    this.speed = 30;
+    this.vy = 0;
+    this.speed = 8;
     this.score = 0;
+    this.upInput = false;
+    this.downInput = false;
 
     document.addEventListener('keydown', event => {
-      switch(event.key) {
-        case up: 
+      switch (event.key) {
+        case upKey:
           this.up();
           break;
-        case down:
+        case downKey:
           this.down();
           break;
-          }
-        });
       }
+    });
+
+    document.addEventListener('keyup', event => {
+      switch (event.key) {
+        case upKey:
+          this.upInput = false;
+          break;
+        case downKey:
+          this.downInput = false;
+          break;
+      }
+    });
+  }
 
       coordinates(x, y, width, height) {
         let leftX = x;
@@ -32,25 +45,28 @@ export default class Paddle {
         return {leftX, rightX, topY, bottomY};
       }
 
-      up() {
-        this.y = Math.max(this.y - this.speed, 0);
+      up () {
+        this.upInput = true;
       }
-      
-      down() {
-        this.y = Math.min(this.y + this.speed, this.boardHeight - this.height);
-      }
+    
+      down () {
+        this.downInput = true;
+    }
 
   render(svg) {
     
-  let rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttributeNS(null, 'x', this.x);
-  rect.setAttributeNS(null, 'y', this.y);
-  rect.setAttributeNS(null, 'width', this.width);
-  rect.setAttributeNS(null, 'height', this.height);
-  rect.setAttributeNS(null, 'fill', 'rgba(17, 26, 37, 0.795)');
-  rect.setAttributeNS(null, 'stroke', 'black')
-  rect.setAttributeNS(null, 'stroke-width', '1')
+    if (this.upInput) {this.y = Math.max(0, this.y-this.speed)}
+    if (this.downInput) {this.y = Math.min(this.boardHeight-this.height, this.y+this.speed)}
 
-  svg.appendChild(rect);
+    let rect = document.createElementNS(SVG_NS, 'rect');
+    rect.setAttributeNS(null, 'x', this.x);
+    rect.setAttributeNS(null, 'y', this.y);
+    rect.setAttributeNS(null, 'width', this.width);
+    rect.setAttributeNS(null, 'height', this.height);
+    rect.setAttributeNS(null, 'fill', 'rgba(17, 26, 37, 0.795)');
+    rect.setAttributeNS(null, 'stroke', 'black')
+    rect.setAttributeNS(null, 'stroke-width', '1')
+
+    svg.appendChild(rect);
   }
 }
