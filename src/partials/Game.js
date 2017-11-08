@@ -97,15 +97,12 @@ export default class Game {
 
 		if (paddleOneWin) {
 			return this.winner1.render(svg, this.winner1.banner, this.cheer.play(),
-			setTimeout(location.reload.bind(location), 7000));
+			setTimeout(location.reload.bind(location), 6800));
 		}
 		else if (paddleTwoWin) {
 			return this.winner2.render(svg, this.winner2.banner, this.cheer.play(),
-			setTimeout(location.reload.bind(location), 7000));
+			setTimeout(location.reload.bind(location), 6800));
 		}
-
-	
-		
 
 		this.board.render(svg);
 		this.ball.render(svg, this.paddleOne, this.paddleTwo);

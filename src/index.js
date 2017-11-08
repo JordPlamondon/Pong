@@ -8,5 +8,6 @@ const game = new Game('game', 512, 256);
     requestAnimationFrame(gameLoop);
 })();
 
-const music = new Audio ('public/sounds/PongBGMusic.mp3');
-music.play();
+// const music = new Audio ('public/sounds/PongBGMusic.mp3');
+// music.loop = true;
+// music.play();
